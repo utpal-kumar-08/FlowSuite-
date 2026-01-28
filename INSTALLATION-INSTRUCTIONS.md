@@ -3,11 +3,11 @@
 #### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/idurar/idurar-erp-crm.git
+git clone https://github.com/utpal-kumar-08/FlowSuite-
 ```
 
 ```bash
-cd idurar-erp-crm
+cd utpal-kumar-08
 ```
 
 #### Step 2: Create Your MongoDB Account and Database Cluster
@@ -90,43 +90,3 @@ npm run dev
 
 This command will start the frontend server, and you'll be able to access the website on localhost:3000 in your web browser.
 
-:exclamation: :warning:` If you encounter an OpenSSL error while running the frontend server, follow these additional steps:`
-
-Reason behind error: This is caused by the node.js V17 compatible issues with OpenSSL, see [this](https://github.com/nodejs/node/issues/40547) and [this](https://github.com/webpack/webpack/issues/14532) issue on GitHub.
-
-
-Try one of these and error will be solved
-
-- > upgrade to Node.js v20.
-
-- > Enable legacy OpenSSL provider
-
-Here is how you can enable legacy OpenSSL provider
-
-- On Unix-like (Linux, macOS, Git bash, etc.)
-
-```bash
-export NODE_OPTIONS=--openssl-legacy-provider
-```
-
-- On Windows command prompt:
-
-```bash
-set NODE_OPTIONS=--openssl-legacy-provider
-```
-
-- On PowerShell:
-
-```bash
-$env:NODE_OPTIONS = "--openssl-legacy-provider"
-```
-
-Here is [reference](https://github.com/webpack/webpack/issues/14532#issuecomment-947012063) about enabling legacy OpenSSL provider
-
-After trying above solutions, run below command
-
-```bash
-npm run dev
-```
-
-> If you still facing issue, then follow [this stackoverflow thread](https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported). It has so many different types of opinions. You definitely have solution after going through the thread.
